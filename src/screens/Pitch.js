@@ -4,15 +4,16 @@ import { Input } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/EvilIcons'
 import Micon from 'react-native-vector-icons/MaterialIcons'
 import { text_color, theme_color } from '../constant/varible';
+import Button from '../components/About_item_button'
 
 
 const Pitch =()=>{
 
-const image="https://i.pinimg.com/originals/08/40/f3/0840f320f9eabd256dda29bb90e4f40a.jpg"
+const image="https://img.freepik.com/free-photo/double-exposure-image-business-person_31965-2440.jpg?size=626&ext=jpg"
     return(
         <>
         <View style={styles.container}>
-            <ImageBackground resizeMode="cover" style={{height:"100%",width:"100%",alignItems:"center",justifyContent:"center"}} source={{uri:image}}>
+            <ImageBackground resizeMode="cover" style={{height:"100%",width:"100%",alignItems:"center",justifyContent:"center"}} source={require("../assets/main6.jpg")}>
 
             <View style={styles.form}>
       <View style={styles.input_box}>
@@ -28,7 +29,7 @@ const image="https://i.pinimg.com/originals/08/40/f3/0840f320f9eabd256dda29bb90e
       </View>
       <View style={styles.input_box}>
       <Input
-   placeholder="Comment"
+   placeholder="Email"
    leftIcon={{ type: 'MaterialIcons', name: 'email',color:"white" }}
    style={styles.Input}
    inputContainerStyle={styles.input_container_style}
@@ -38,8 +39,8 @@ const image="https://i.pinimg.com/originals/08/40/f3/0840f320f9eabd256dda29bb90e
       </View>
       <View style={styles.input_box}>
       <Input
-   placeholder="Comment"
-   leftIcon={{ type: 'font-awesome', name: 'comment',color:"white" }}
+   placeholder="Message"
+   leftIcon={{ type: 'MaterialIcons', name: 'message',color:"white" }}
    style={styles.Input}
    inputContainerStyle={styles.input_container_style}
    placeholderTextColor="white"
@@ -47,6 +48,11 @@ const image="https://i.pinimg.com/originals/08/40/f3/0840f320f9eabd256dda29bb90e
 //    onChangeText={value => this.setState({ comment: value })}
   />
       </View>
+      <View style={{paddingTop:40,...styles.input_box}}>
+      <Button text="Submit" size={18} bgColor={theme_color} color="white" style={{backGroundColor:theme_color,alignItems:"center",justifyContent:"center",borderRadius:30,}}>
+
+</Button>
+      </View >
       
             </View>
             </ImageBackground>
@@ -71,7 +77,7 @@ const styles= StyleSheet.create({
     ,
     Input:{
         width:"100%",
-        color:text_color,
+        color:"white",
         fontSize:15,
         fontWeight:"bold",
         marginLeft:10
