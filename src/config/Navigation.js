@@ -45,37 +45,39 @@ const Navigation = () => {
                 <Tab.Navigator initialRouteName="stack" tabBarOptions={{
                     style: { ...styles.tabBar },
                     inactiveTintColor: "white",
-                    activeTintColor:theme_color,
-                    activeBackgroundColor:"#f1f2f6",
-                    labelStyle:{
-                       
-                        fontSize:12,
-                        position:"absolute",
-                        bottom:10
-                    },
-                    iconStyle:{
-                        marginBottom:30
-                    }
-                  
+                    activeTintColor: theme_color,
+                    activeBackgroundColor: "#f1f2f6",
+                    labelStyle: {
 
-                  
+                        fontSize: 12,
+                        position: "absolute",
+                        bottom: 10
+                    },
+                    iconStyle: {
+                        marginBottom: 30
+                    }
+
+
+
                 }} >
-                    <Tab.Screen name="stack" component={StackNavigator} options={{ title: "HOME",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="home" color={color} size={25} />) }}>
+                    <Tab.Screen name="stack" component={StackNavigator} options={{ title: "HOME", tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="home" color={color} size={25} />) }}>
 
                     </Tab.Screen >
-                    <Tab.Screen options={ {title:"PITCH",
-                        tabBarIcon: ({ focused, size, color }) => 
+                    <Tab.Screen options={{
+                        title: "PITCH",
+                        tabBarIcon: ({ focused, size, color }) =>
                         (
                             <MaterialIcons name="video-library" color={color} size={25} />
-                          )
-                        
+                        )
+
                     }} name="pitch" component={PitchScreen}></Tab.Screen>
-                    <Tab.Screen name="Secrets" component={Secrets} options={{title:"SECRETS",
+                    <Tab.Screen name="Secrets" component={Secrets} options={{
+                        title: "SECRETS",
                         tabBarIcon: ({ color, size }) => (
                             <MaterialIcons name="lock" color={color} size={25} />
                         ),
                     }}></Tab.Screen>
-                    <Tab.Screen name="About"  options={{ title: "ABOUT",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={About}></Tab.Screen>
+                    <Tab.Screen name="About" options={{ title: "ABOUT", tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={About}></Tab.Screen>
                 </Tab.Navigator>
             </NavigationContainer>
         </>
@@ -116,14 +118,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: theme_color,
         shadowColor: "#000",
-shadowOffset: {
-	width: 0,
-	height: 4,
-},
-shadowOpacity: 0.30,
-shadowRadius: 4.65,
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 4.65,
 
-elevation: 8,
+        elevation: 8,
 
 
     }
