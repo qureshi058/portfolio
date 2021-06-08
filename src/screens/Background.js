@@ -12,11 +12,13 @@ const Background = () => {
 
     return (
         <>
-            <View style={styles.container}>
-                <ScrollView>
-                    <AboutComponent paraGraphs={paraGraphs} image={image}></AboutComponent>
-                </ScrollView>
-            </View>
+        <View style={styles.container}>
+        <ScrollView>
+        {/* <Header size={17} color="#ffffff" bgColor="#1e272e" text="ASH BACKGROUND"/> */}
+
+         <AboutComponent paraGraphs={paraGraphs} image={image}></AboutComponent>
+         </ScrollView>
+        </View>
         </>
     )
 }

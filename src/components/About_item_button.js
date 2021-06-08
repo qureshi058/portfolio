@@ -4,13 +4,13 @@ import {theme_color} from '../constant/varible'
 
 
 
-const About_items = ({text,color,size,textStyle={},bgColor,style={},onPress }) => {
+const About_item = ({text,color,size,textStyle={},bgColor,style={},onPress }) => {
 
     return (
         <>
       
-            <TouchableOpacity style={styles.btn} onPress={onPress}>
-                <Text style={{fontSize:size?size:16,color:color?color:"white"}}>{text}</Text>
+            <TouchableOpacity activeOpacity={0.7} style={styles.btn} onPress={onPress}>
+                <Text style={{fontSize:size?size:12,color:color?color:"white"}}>{text}</Text>
                 </TouchableOpacity>
           
         </>
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
  width: Dimensions.get("screen").width
     },
     btn:{
+      shadowOpacity:0,
         paddingBottom:20,
         paddingTop:14,
     backfaceVisibility:"hidden",
@@ -38,5 +39,5 @@ const styles = StyleSheet.create({
     }
 })
 
-export default About_items
+export default About_item
 // 

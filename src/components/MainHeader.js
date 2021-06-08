@@ -9,14 +9,14 @@ const MainHeader = ({ text, textColor, textSize, textStyle = {}, bgColor, style 
     const navigation = useNavigation()
     return (
         <>
-
-            <View style={{ ...styles.container, backgroundColor: bgColor ? bgColor : "white", ...style }}>
-                <View style={{ marginLeft: 10 }}>
-                    {isIcon ? <Icon onPress={() => navigation.goBack()} name="arrow-back" color={iconColor ? iconColor : "black"} size={iconSize ? iconSize : 30} /> : null}
-                </View>
-                <View style={{ flex: 1, alignItems: "center" }}>
-                    <Text style={{ fontSize: textSize ? textSize : 18, color: textColor ? textColor : "black", ...textStyle }}>{text}</Text>
-                </View>
+      
+            <View style={{...styles.container,backgroundColor:bgColor?bgColor:theme_color,...style}}>
+          <View style={{marginLeft:10}}>
+          {isIcon?<Icon onPress={()=>navigation.goBack()} name="arrow-back" color={iconColor?iconColor:"white"} size={iconSize?iconSize:30}/>:null}
+          </View>
+               <View style={{flex:1,alignItems:"center"}}>
+               <Text style={{fontSize:textSize?textSize:16,color:textColor?textColor:"white",...textStyle}}>{text}</Text>
+               </View>
             </View>
 
         </>
