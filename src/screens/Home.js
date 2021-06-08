@@ -1,5 +1,6 @@
 import React,{useRef} from 'react'
 import {View,Text,StyleSheet,TextInput,ScrollView,TouchableOpacity,ImageBackground,Dimensions,Animated} from 'react-native'
+import {theme_color,text_color} from '../constant/varible'
 
 
 
@@ -44,9 +45,9 @@ const styles= StyleSheet.create({
     },
     descriptionBox:{
         
-        borderColor:"#192a56",
+        borderColor:theme_color,
         borderWidth:1,
-        width:"70%",
+        width:"80%",
         padding:25,
         marginTop:-130,
         backgroundColor:"white",
@@ -65,12 +66,12 @@ elevation: 3,
     ,
     headText:{
 fontSize:25,
-color:"#192a56",
+color:theme_color,
 fontWeight:"bold"
     },
     simpleText:{
         fontSize:15,
-        color:"#192a56",
+        color:text_color,
         marginTop:20,
         letterSpacing:1
     }

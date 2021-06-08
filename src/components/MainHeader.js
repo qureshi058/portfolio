@@ -15,7 +15,7 @@ const navigation=useNavigation()
           {isIcon?<Icon onPress={()=>navigation.goBack()} name="arrow-back" color={iconColor?iconColor:"white"} size={iconSize?iconSize:30}/>:null}
           </View>
                <View style={{flex:1,alignItems:"center"}}>
-               <Text style={{fontSize:textSize?textSize:18,color:textColor?textColor:"white",...textStyle}}>{text}</Text>
+               <Text style={{fontSize:textSize?textSize:16,color:textColor?textColor:"white",...textStyle}}>{text}</Text>
                </View>
             </View>
           

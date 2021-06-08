@@ -1,8 +1,9 @@
 import React from 'react'
 import { View, Text, StyleSheet, TextInput, ScrollView, TouchableOpacity, Dimensions, Image } from 'react-native'
+import {text_color,theme_color} from '../constant/varible'
 
 
-const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={} }) => {
+const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={},color }) => {
 
     return (
         <>
@@ -13,7 +14,7 @@ const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={} }) => 
                     <View>
                         {paraGraphs.length ? paraGraphs.map((para) => {
                             return(
-                                <Text style={{ marginTop: 20, fontSize: 15, lineHeight: 25,...paraStyle }}>
+                                <Text style={{ marginTop: 20, fontSize: 15, lineHeight: 25,color:color?color:text_color,...paraStyle }}>
                                 {para}
                             </Text>
                             )

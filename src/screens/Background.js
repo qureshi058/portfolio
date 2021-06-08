@@ -13,8 +13,9 @@ const Background =()=>{
     return(
         <>
         <View style={styles.container}>
-        <Header size={20} color="#ffffff" bgColor="#1e272e" text="ASH BACKGROUND"/>
-<ScrollView>
+        <ScrollView>
+        <Header size={17} color="#ffffff" bgColor="#1e272e" text="ASH BACKGROUND"/>
+
          <AboutComponent paraGraphs={paraGraphs} image={image}></AboutComponent>
          </ScrollView>
         </View>
