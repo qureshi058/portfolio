@@ -51,10 +51,10 @@ const Navigation = () => {
                        
                         fontSize:12,
                         position:"absolute",
-                        bottom:15
+                        bottom:10
                     },
                     iconStyle:{
-                        marginBottom:15
+                        marginBottom:30
                     }
                   
 
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     },
     tabBar: {
         width: width,
-        height: 93,
+        height: 70,
         justifyContent: "center",
         backgroundColor: theme_color,
         shadowColor: "#000",
