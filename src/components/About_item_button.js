@@ -10,7 +10,7 @@ const About_item = ({text,color,size,textStyle={},bgColor,style={},onPress }) =>
         <>
       
             <TouchableOpacity activeOpacity={0.7} style={{...styles.btn,backgroundColor:bgColor?bgColor:null,...style}} onPress={onPress}>
-                <Text style={{fontSize:size?size:12,color:color?color:"white"}}>{text}</Text>
+                <Text style={{fontSize:size?size:15,color:color?color:"white",}}>{text}</Text>
                 </TouchableOpacity>
           
         </>
