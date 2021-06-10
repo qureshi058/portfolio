@@ -14,7 +14,7 @@ const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={},color 
                     <View>
                         {paraGraphs.length ? paraGraphs.map((para) => {
                             return(
-                                <Text style={{ marginTop: 20, fontSize: 14, lineHeight: 25,color:color?color:text_color,...paraStyle }}>
+                                <Text style={{ marginTop: 20, fontSize: 14,textAlign:"justify" , lineHeight: 25,color:color?color:text_color,...paraStyle }}>
                                 {para}
                             </Text>
                             )

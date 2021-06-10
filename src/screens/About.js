@@ -15,11 +15,7 @@ const About =({navigation})=>{
         <>
 
 <View style={styles.container}>
-<<<<<<< HEAD
-{/* <MainHeader isIcon={true}  text="ABOUT ASH"></MainHeader> */}
-=======
 <MainHeader textSize={16}  text="ABOUT ASH"></MainHeader>
->>>>>>> a1deb9fe6c7488f63850fa699b8205746fd6e77e
 <ImageBackground source={require('../assets/main5.jpg')} style={{flex:1,width:Dimensions.get("screen").width,opacity:1}}>
     <View style={{width:"100%",paddingLeft:30,paddingTop:30,paddingRight:30,}}>
 <About_item onPress={()=>{navigation.navigate("Background")}} text="BACK GROUND"/>

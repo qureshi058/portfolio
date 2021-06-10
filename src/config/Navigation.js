@@ -44,16 +44,6 @@ const Navigation = () => {
             <NavigationContainer>
                 <Tab.Navigator initialRouteName="stack" tabBarOptions={{
                     style: { ...styles.tabBar },
-<<<<<<< HEAD
-                    inactiveTintColor: "white",
-                    activeTintColor: theme_color,
-                    activeBackgroundColor: "#f1f2f6",
-                    labelStyle: {
-
-                        fontSize: 12,
-                        position: "absolute",
-                        bottom: 10
-=======
                     inactiveTintColor: "#747d8c",
                     activeTintColor:theme_color,
                    
@@ -62,7 +52,6 @@ const Navigation = () => {
                         fontSize:11,
                         position:"absolute",
                         bottom:15
->>>>>>> a1deb9fe6c7488f63850fa699b8205746fd6e77e
                     },
                     iconStyle: {
                         marginBottom: 25
@@ -71,11 +60,7 @@ const Navigation = () => {
 
 
                 }} >
-<<<<<<< HEAD
-                    <Tab.Screen name="stack" component={StackNavigator} options={{ title: "HOME", tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="home" color={color} size={25} />) }}>
-=======
                     <Tab.Screen name="Home" component={HomeScreen} options={{ title: "HOME",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="home" color={color} size={25} />) }}>
->>>>>>> a1deb9fe6c7488f63850fa699b8205746fd6e77e
 
                     </Tab.Screen >
                     <Tab.Screen options={{
@@ -92,11 +77,7 @@ const Navigation = () => {
                             <MaterialIcons name="lock" color={color} size={25} />
                         ),
                     }}></Tab.Screen>
-<<<<<<< HEAD
-                    <Tab.Screen name="About" options={{ title: "ABOUT", tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={About}></Tab.Screen>
-=======
                     <Tab.Screen name="stack"  options={{ title: "ABOUT",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={StackNavigator}></Tab.Screen>
->>>>>>> a1deb9fe6c7488f63850fa699b8205746fd6e77e
                 </Tab.Navigator>
             </NavigationContainer>
         </>
@@ -109,7 +90,7 @@ const StackNavigator = () => {
         <>
             <Stack.Navigator screenOptions={{
                 headerStyle:{
-                    height:80,
+                    height:60,
                     backgroundColor:theme_color,
                     
 
@@ -148,11 +129,7 @@ const styles = StyleSheet.create({
     },
     tabBar: {
         width: width,
-<<<<<<< HEAD
-        height: 60,
-=======
         height: 70,
->>>>>>> a1deb9fe6c7488f63850fa699b8205746fd6e77e
         justifyContent: "center",
         backgroundColor: "white",
         shadowColor: "#000",
