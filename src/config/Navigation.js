@@ -28,7 +28,7 @@ import fIcon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 // import varibale ---------------------
-import { theme_color } from '../constant/varible'
+import { text_color, theme_color } from '../constant/varible'
 
 
 
@@ -44,12 +44,12 @@ const Navigation = () => {
             <NavigationContainer>
                 <Tab.Navigator initialRouteName="stack" tabBarOptions={{
                     style: { ...styles.tabBar },
-                    inactiveTintColor: "white",
+                    inactiveTintColor: "#747d8c",
                     activeTintColor:theme_color,
-                    activeBackgroundColor:"#f1f2f6",
+                   
                     labelStyle:{
                        
-                        fontSize:12,
+                        fontSize:11,
                         position:"absolute",
                         bottom:15
                     },
@@ -60,7 +60,7 @@ const Navigation = () => {
 
                   
                 }} >
-                    <Tab.Screen name="stack" component={StackNavigator} options={{ title: "HOME",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="home" color={color} size={25} />) }}>
+                    <Tab.Screen name="Home" component={HomeScreen} options={{ title: "HOME",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="home" color={color} size={25} />) }}>
 
                     </Tab.Screen >
                     <Tab.Screen options={ {title:"PITCH",
@@ -75,7 +75,7 @@ const Navigation = () => {
                             <MaterialIcons name="lock" color={color} size={25} />
                         ),
                     }}></Tab.Screen>
-                    <Tab.Screen name="About"  options={{ title: "ABOUT",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={About}></Tab.Screen>
+                    <Tab.Screen name="stack"  options={{ title: "ABOUT",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={StackNavigator}></Tab.Screen>
                 </Tab.Navigator>
             </NavigationContainer>
         </>
@@ -86,21 +86,36 @@ const StackNavigator = () => {
     const Stack = createStackNavigator()
     return (
         <>
-            <Stack.Navigator>
-                <Stack.Screen name="home" options={{ headerShown: false }} component={HomeScreen} />
-                <Stack.Screen name="Background" component={Background} />
-                <Stack.Screen name="Book_Ash_for_an_Event" component={Book_Ash_for_an_Event} />
-                <Stack.Screen name="Business_Advice_Mentoring" component={Business_Advice_Mentoring} />
-                <Stack.Screen name="ConnectWithAsh" component={ConnectWithAsh} />
-                <Stack.Screen name="DigitalEntreprenuer" component={DigitalEntreprenuer} />
-                <Stack.Screen name="Philanthropy" component={Philanthropy} />
-                <Stack.Screen name="Publications" component={Publications} />
-                <Stack.Screen name="Resources" component={Resources} />
-                <Stack.Screen name="SocialMedia" component={SocialMedia} />
-                <Stack.Screen name="Timeline" component={Timeline} />
-                <Stack.Screen name="Form" component={Form} />
-                <Stack.Screen name="Book" component={Book} />
-                <Stack.Screen name="KhokhraWelfare" component={KhokhraWelfare} />
+            <Stack.Navigator screenOptions={{
+                headerStyle:{
+                    height:80,
+                    backgroundColor:theme_color,
+                    
+
+                },
+                headerTitleStyle:{
+                    color:"white",
+                    alignSelf:"center",
+                    marginRight:50,
+                    fontSize:16
+
+                },
+           headerTintColor:"white"
+            }}>
+                <Stack.Screen name="About" options={{ headerShown: false,title:"ABOUT ASH" }} component={About} />
+                <Stack.Screen name="Background" component={Background} options={{ headerShown: true,title:"ASH BACKGROUND" }} />
+                <Stack.Screen name="Book_Ash_for_an_Event" component={Book_Ash_for_an_Event} options={{ title:"BOOK ASH FOR AN EVENT" }} />
+                <Stack.Screen name="Business_Advice_Mentoring" component={Business_Advice_Mentoring} options={{ title:"BUSINESS ADVICE MENTORING" }} />
+                {/* <Stack.Screen name="ConnectWithAsh" component={ConnectWithAsh} /> */}
+                <Stack.Screen name="DigitalEntreprenuer" component={DigitalEntreprenuer}options={{ title:"DIGITAL ENTERPRENEUR" }} />
+                <Stack.Screen name="Philanthropy" component={Philanthropy} options={{ title:"ASH PHILANTHROPY" }} />
+                {/* <Stack.Screen name="Publications" component={Publications} /> */}
+                {/* <Stack.Screen name="Resources" component={Resources} /> */}
+                <Stack.Screen name="SocialMedia" component={SocialMedia} options={{ title:"SOCIAL MEDIA" }} />
+                <Stack.Screen name="Timeline" component={Timeline} options={{ title:"ASH TIMELINE" }} />
+                {/* <Stack.Screen name="Form" component={Form} />
+                <Stack.Screen name="Book" component={Book} /> */}
+                <Stack.Screen name="KhokhraWelfare" component={KhokhraWelfare} options={{ title:"KHOKRA WALFARE" }} />
             </Stack.Navigator>
         </>)
 }
@@ -112,9 +127,9 @@ const styles = StyleSheet.create({
     },
     tabBar: {
         width: width,
-        height: 93,
+        height: 70,
         justifyContent: "center",
-        backgroundColor: theme_color,
+        backgroundColor: "white",
         shadowColor: "#000",
 shadowOffset: {
 	width: 0,

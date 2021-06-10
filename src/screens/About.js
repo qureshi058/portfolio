@@ -15,17 +15,16 @@ const About =({navigation})=>{
         <>
 
 <View style={styles.container}>
-<MainHeader isIcon={true}  text="ABOUT ASH"></MainHeader>
+<MainHeader textSize={16}  text="ABOUT ASH"></MainHeader>
 <ImageBackground source={require('../assets/main5.jpg')} style={{flex:1,width:Dimensions.get("screen").width,opacity:1}}>
     <View style={{width:"100%",paddingLeft:30,paddingTop:30,paddingRight:10}}>
 <About_item onPress={()=>{navigation.navigate("Background")}} text="BACK GROUND"/>
-
-<About_item onPress={()=>{navigation.navigate("Background")}} text="PHILANTROPHY"/>
-<About_item onPress={()=>{navigation.navigate("Background")}} text="TIMELINE"/>
-<About_item onPress={()=>{navigation.navigate("Background")}} text="BUSINESS ADVICE & MENTORING"/>
-<About_item onPress={()=>{navigation.navigate("Background")}} text="BOOK ASH FOR AN EVENT"/>
-<About_item onPress={()=>{navigation.navigate("Background")}} text="SOCIAL MEDIA "/>
-<About_item onPress={()=>{navigation.navigate("Background")}} text="DIGITAL ENTERPRENEUR"/>
+<About_item onPress={()=>{navigation.navigate("Philanthropy")}} text="PHILANTROPHY"/>
+<About_item onPress={()=>{navigation.navigate("Timeline")}} text="TIMELINE"/>
+<About_item onPress={()=>{navigation.navigate("Business_Advice_Mentoring")}} text="BUSINESS ADVICE & MENTORING"/>
+<About_item onPress={()=>{navigation.navigate("Book_Ash_for_an_Event")}} text="BOOK ASH FOR AN EVENT"/>
+<About_item onPress={()=>{navigation.navigate("SocialMedia")}} text="SOCIAL MEDIA "/>
+<About_item onPress={()=>{navigation.navigate("DigitalEntreprenuer")}} text="DIGITAL ENTERPRENEUR"/>
     </View>
 
 </ImageBackground>
