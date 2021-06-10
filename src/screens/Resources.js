@@ -1,5 +1,5 @@
 import React from 'react'
-import {View,Text,StyleSheet,TextInput,ScrollView,TouchableOpacity} from 'react-native'
+import {View,Text,StyleSheet,TextInput,ScrollView,TouchableOpacity, Dimensions} from 'react-native'
 
 
 const Resources =()=>{
@@ -7,9 +7,7 @@ const Resources =()=>{
     return(
         <>
         <View style={styles.container}>
-            <Text>
-                Resources
-            </Text>
+        <Text>resources</Text>
         </View>
         </>
     )
@@ -19,8 +17,9 @@ const styles= StyleSheet.create({
     container:{
         flex:1,
         justifyContent:"center",
-        alignItems:"center"
-    }
+        alignItems:'center'
+         }
+  
 })
 
 export default Resources

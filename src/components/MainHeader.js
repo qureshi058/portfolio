@@ -11,9 +11,9 @@ const MainHeader = ({ text, textColor, textSize, textStyle = {}, bgColor, style 
         <>
       
             <View style={{...styles.container,backgroundColor:bgColor?bgColor:theme_color,...style}}>
-          <View style={{marginLeft:10}}>
-          {isIcon?<Icon onPress={()=>navigation.goBack()} name="arrow-back" color={iconColor?iconColor:"white"} size={iconSize?iconSize:30}/>:null}
-          </View>
+          {isIcon?<View style={{marginLeft:10}}>
+          <Icon onPress={()=>navigation.goBack()} name="arrow-back" color={iconColor?iconColor:"white"} size={iconSize?iconSize:30}/>
+          </View>:null}
                <View style={{flex:1,alignItems:"center"}}>
                <Text style={{fontSize:textSize?textSize:16,color:textColor?textColor:"white",...textStyle}}>{text}</Text>
                </View>
