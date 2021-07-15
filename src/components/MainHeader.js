@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
         flexDirection: "row",
         alignItems: "center",
-        height: 55,
+        height: 60,
         width: Dimensions.get("screen").width,
         shadowColor: "#000",
         shadowOffset: {
@@ -39,6 +39,10 @@ const styles = StyleSheet.create({
         shadowRadius: 6.27,
 
         elevation: 10,
+        borderBottomLeftRadius:30,
+        borderBottomRightRadius:30,
+        position: "absolute",
+        top: 0
     }
 })
 

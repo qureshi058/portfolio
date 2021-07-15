@@ -19,8 +19,10 @@ const Home = () => {
             <View style={styles.container}>
                 <MainHeader textSize={16} isIcon={false} text="ASH KHOKRE"></MainHeader>
                 <ScrollView>
-                    <View style={{ widt: "100%" }}>
-                        <ImageBackground resizeMode="cover" source={require("../assets/main5.jpg")} style={{ height: Dimensions.get("screen").height * 0.75, width: "100%", justifyContent: "flex-end" }}>
+                    <View style={{ widt: "100%",position:"relative" }}>
+                   
+                        <ImageBackground resizeMode="cover" source={require("../assets/main5.jpg")} style={{ height: Dimensions.get("screen").height * 0.8, width: "100%", justifyContent: "flex-end" }}>
+                        
                             <View style={{ paddingLeft: 30, paddingBottom: 50, paddingTop: 50, justifyContent: 'center', width: "80%", }}>
                                 <Text style={{ ...styles.headText }}>HELLO , I 'm </Text>
                                 <Text style={{ ...styles.headText }}>ASH KHOKRE</Text>
