@@ -29,8 +29,7 @@ const styles = StyleSheet.create({
     },
     btn:{
     
-        paddingBottom:20,
-        paddingTop:14,
+       padding: 15,
     backfaceVisibility:"hidden",
     width:"100%",
     borderBottomColor:theme_color,

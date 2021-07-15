@@ -5,6 +5,7 @@ import { theme_color } from '../constant/varible'
 
 
 const Book_Ash_for_an_Event =()=>{
+    const image = require('../assets/main4.jpg')
 const paraGraphs=["In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."]
     return(
         <>
@@ -15,9 +16,9 @@ const paraGraphs=["In publishing and graphic design, Lorem ipsum is a placeholde
        </View>
            <View style={{paddingTop:10,paddingBottom:20,flex:1}}>
            
-           <AboutComponent image={{uri:"https://lh3.googleusercontent.com/proxy/qk9OmGWC-PZMKk-xJH6mk0R1A90VMbRSXWL-vtJiyRjOxuRTGqWmCUDy-ZWB8H9wyL2XXxRwWAlbkgqu_flgFLv6nYcmBZXRcwOQA9Pi2EoAlzDbJUux28y2mS3Oc0O0G6Tt-f9O9Ddo3pBUlN5p"}} paraGraphs={paraGraphs}/>  
-            <AboutComponent image={{uri:"https://lh3.googleusercontent.com/proxy/qk9OmGWC-PZMKk-xJH6mk0R1A90VMbRSXWL-vtJiyRjOxuRTGqWmCUDy-ZWB8H9wyL2XXxRwWAlbkgqu_flgFLv6nYcmBZXRcwOQA9Pi2EoAlzDbJUux28y2mS3Oc0O0G6Tt-f9O9Ddo3pBUlN5p"}} paraGraphs={paraGraphs}/>  
-            <AboutComponent image={{uri:"https://lh3.googleusercontent.com/proxy/qk9OmGWC-PZMKk-xJH6mk0R1A90VMbRSXWL-vtJiyRjOxuRTGqWmCUDy-ZWB8H9wyL2XXxRwWAlbkgqu_flgFLv6nYcmBZXRcwOQA9Pi2EoAlzDbJUux28y2mS3Oc0O0G6Tt-f9O9Ddo3pBUlN5p"}} paraGraphs={paraGraphs}/>  
+           <AboutComponent image={image} paraGraphs={paraGraphs}/>  
+            <AboutComponent image={image} paraGraphs={paraGraphs}/>  
+            <AboutComponent image={image} paraGraphs={paraGraphs}/>  
        
            </View>
            <View style={{width:"100%",alignItems:"center",paddingBottom:40}} >

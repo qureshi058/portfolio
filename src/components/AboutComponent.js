@@ -1,20 +1,20 @@
 import React from 'react'
 import { View, Text, StyleSheet, TextInput, ScrollView, TouchableOpacity, Dimensions, Image } from 'react-native'
-import {text_color,theme_color} from '../constant/varible'
+import {fon_family, text_color,theme_color} from '../constant/varible'
 
 
-const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={},color }) => {
+const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={},color,containerStyle }) => {
 
     return (
         <>
     
-            <View style={styles.container}>
-                <View style={{ width: "85%", alignItems: "center" }}>
-                    <Image resizeMode="cover" style={{ width: "100%", height: 200, ...imageStyle }} source={image} ></Image>
-                    <View>
+            <View style={{...styles.container,...containerStyle}}>
+                <View style={{ width: "82%", alignItems: "center" }}>
+                {image?<Image  style={{ width: "100%", resizeMode:"cover",height: 180, ...imageStyle }} source={image} ></Image>:null}
+                    <View style={{width:"100%"}}>
                         {paraGraphs.length ? paraGraphs.map((para) => {
                             return(
-                                <Text style={{ marginTop: 20, fontSize: 14,textAlign:"justify" , lineHeight: 25,color:color?color:text_color,...paraStyle }}>
+                                <Text style={{...styles.textStyle, color:color?color:text_color,...paraStyle }}>
                                 {para}
                             </Text>
                             )
@@ -31,11 +31,14 @@ const AboutComponent = ({ image, paraGraphs = [], imageStyle,paraStyle={},color 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 30,
+        paddingTop: 40,
         alignItems: "center",
         paddingBottom:40,
-
-        width: Dimensions.get("screen").width
+width: Dimensions.get("screen").width
+    },
+    textStyle:{
+        marginTop: 20, fontSize: 12,textAlign:"justify" , lineHeight: 25,
+        fontFamily:fon_family
     }
 })
 

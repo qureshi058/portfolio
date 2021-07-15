@@ -22,6 +22,7 @@ import Publications from '../screens/Publications.js'
 import Resources from '../screens/Resources.js'
 import SocialMedia from '../screens/SocialMedia.js'
 import Timeline from '../screens/Timeline.js'
+import Book_page from '../screens/Book_page'
 // import Icons ------------------------------------------------
 import Icon from 'react-native-vector-icons/Ionicons';
 import fIcon from 'react-native-vector-icons/FontAwesome';
@@ -42,42 +43,32 @@ const Navigation = () => {
     return (
         <>
             <NavigationContainer>
-                <Tab.Navigator initialRouteName="stack" tabBarOptions={{
+                <Tab.Navigator tabBarOptions={{
                     style: { ...styles.tabBar },
                     inactiveTintColor: "#747d8c",
-                    activeTintColor:theme_color,
-                   
-                    labelStyle:{
-                       
-                        fontSize:11,
-                        position:"absolute",
-                        bottom:15
+                    activeTintColor: theme_color,
+                    labelStyle: {
+                        fontSize: 11,
+                        position: "absolute",
+                        bottom: 15
                     },
                     iconStyle: {
                         marginBottom: 25
                     }
-
-
-
                 }} >
-                    <Tab.Screen name="Home" component={HomeScreen} options={{ title: "HOME",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="home" color={color} size={25} />) }}>
-
+                    <Tab.Screen name="Home" component={HomeScreen}
+                        options={{ title: "HOME", tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="home" color={color} size={25} />) }}>
                     </Tab.Screen >
                     <Tab.Screen options={{
                         title: "PITCH",
-                        tabBarIcon: ({ focused, size, color }) =>
-                        (
-                            <MaterialIcons name="video-library" color={color} size={25} />
-                        )
-
+                        tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="video-library" color={color} size={25} />)
                     }} name="pitch" component={PitchScreen}></Tab.Screen>
                     <Tab.Screen name="Secrets" component={Secrets} options={{
                         title: "SECRETS",
                         tabBarIcon: ({ color, size }) => (
-                            <MaterialIcons name="lock" color={color} size={25} />
-                        ),
+                            <MaterialIcons name="lock" color={color} size={25} />),
                     }}></Tab.Screen>
-                    <Tab.Screen name="stack"  options={{ title: "ABOUT",tabBarIcon:({focused,size,color})=>( <MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={StackNavigator}></Tab.Screen>
+                    <Tab.Screen name="stack" options={{ title: "ABOUT", tabBarIcon: ({ focused, size, color }) => (<MaterialIcons name="supervised-user-circle" color={color} size={25} />) }} component={StackNavigator}></Tab.Screen>
                 </Tab.Navigator>
             </NavigationContainer>
         </>
@@ -89,35 +80,36 @@ const StackNavigator = () => {
     return (
         <>
             <Stack.Navigator screenOptions={{
-                headerStyle:{
-                    height:60,
-                    backgroundColor:theme_color,
-                    
-
+                headerStyle: {
+                    height: 60,
+                    backgroundColor: theme_color,
+                    zIndex:2,
+                    position: "absolute",
+                    top: 0,
+             
                 },
-                headerTitleStyle:{
-                    color:"white",
-                    alignSelf:"center",
-                    marginRight:50,
-                    fontSize:16
-
+                headerTitleStyle: {
+                    color: "white",
+                    alignSelf: "center",
+                    marginRight: 50,
+                    fontSize: 16
                 },
-           headerTintColor:"white"
+                headerTintColor: "white"
             }}>
-                <Stack.Screen name="About" options={{ headerShown: false,title:"ABOUT ASH" }} component={About} />
-                <Stack.Screen name="Background" component={Background} options={{ headerShown: true,title:"ASH BACKGROUND" }} />
-                <Stack.Screen name="Book_Ash_for_an_Event" component={Book_Ash_for_an_Event} options={{ title:"BOOK ASH FOR AN EVENT" }} />
-                <Stack.Screen name="Business_Advice_Mentoring" component={Business_Advice_Mentoring} options={{ title:"BUSINESS ADVICE MENTORING" }} />
+                <Stack.Screen name="About" options={{ headerShown: false, title: "ABOUT ASH" }} component={About} />
+                <Stack.Screen name="Background" component={Background} options={{ headerShown: true, title: "ABOUT ASH" }} />
+                <Stack.Screen name="Book_Ash_for_an_Event" component={Book_Ash_for_an_Event} options={{ title: "ABOUT ASH" }} />
+                <Stack.Screen name="Business_Advice_Mentoring" component={Business_Advice_Mentoring} options={{ title: "ABOUT ASH" }} />
                 {/* <Stack.Screen name="ConnectWithAsh" component={ConnectWithAsh} /> */}
-                <Stack.Screen name="DigitalEntreprenuer" component={DigitalEntreprenuer}options={{ title:"DIGITAL ENTERPRENEUR" }} />
-                <Stack.Screen name="Philanthropy" component={Philanthropy} options={{ title:"ASH PHILANTHROPY" }} />
-                {/* <Stack.Screen name="Publications" component={Publications} /> */}
+                <Stack.Screen name="DigitalEntreprenuer" component={DigitalEntreprenuer} options={{ title: "ABOUT ASH" }} />
+                <Stack.Screen name="Philanthropy" component={Philanthropy} options={{ title: "ABOUT ASH" }} />
+                <Stack.Screen name="Publications" component={Publications} />
                 {/* <Stack.Screen name="Resources" component={Resources} /> */}
-                <Stack.Screen name="SocialMedia" component={SocialMedia} options={{ title:"SOCIAL MEDIA" }} />
-                <Stack.Screen name="Timeline" component={Timeline} options={{ title:"ASH TIMELINE" }} />
-                {/* <Stack.Screen name="Form" component={Form} />
-                <Stack.Screen name="Book" component={Book} /> */}
-                <Stack.Screen name="KhokhraWelfare" component={KhokhraWelfare} options={{ title:"KHOKRA WALFARE" }} />
+                <Stack.Screen name="SocialMedia" component={SocialMedia} options={{ title: "ABOUT ASH" }} />
+                <Stack.Screen name="Timeline" component={Timeline} options={{ title: "ABOUT ASH" }} />
+                <Stack.Screen name="Book_page" component={Book_page} />
+                <Stack.Screen name="Book" component={Book} />
+                <Stack.Screen name="KhokhraWelfare" component={KhokhraWelfare} options={{ title: "ABOUT ASH" }} />
             </Stack.Navigator>
         </>)
 }
@@ -139,7 +131,6 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.30,
         shadowRadius: 4.65,
-
         elevation: 8,
 
 
